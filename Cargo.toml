@@ -1,0 +1,14 @@
+[package]
+name = "polars_snowflake"
+version = "0.1.0"
+authors = []
+edition = "2021"
+
+[lib]
+name = "snowflake_polars"
+path = "src/lib.rs"
+crate-type = ["rlib"]
+
+[dependencies]
+polars = { git = "https://github.com/pola-rs/polars", features = ["simd", "performant", "dtype-full", "ipc"] , rev = "a731ec47acc9e8a70b3c908006008abaf26e2e29"}
+indexmap = "1.9.0"
